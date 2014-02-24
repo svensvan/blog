@@ -3,7 +3,7 @@ layout: post
 title: "How I Made Myself"
 ---
 
-<p>This blog is hosted on Github Pages.  It is created using Jekyll. Setting up Github pages is easy if you know the steps. </p>
+This blog is hosted on Github Pages.  It is created using Jekyll. Setting up Github pages is easy if you know the steps. 
 
 <!-- more -->
 
