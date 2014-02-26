@@ -3,9 +3,7 @@ layout: post
 title: "Using Fabric to Automate Tasks for Storm"
 ---
 
-Once you start using distributed, cluster software you will need to automate the creation of new nodes. 
-	I use Fabric to automate my tasks.  I made 
-	a fabfile.py based on 
+A Storm cluster has many nodes.  To automate the steps for creating and managing nodes use something like Python Fabric. Listed below is the fabfile.py based on
 	[Michael Noll's excellent tutorial](http://www.michael-noll.com/tutorials/running-multi-node-storm-cluster/ "Storm Tutorial")
 
 

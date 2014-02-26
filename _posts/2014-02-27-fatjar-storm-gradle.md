@@ -3,7 +3,7 @@ layout: post
 title: "The fatjar for Storm using Gradle"
 ---
 
-Storm is pretty good for building a realtime processing engine, but setting up the fatjar can be a pain.  This is the gradle build file for running my test Groovy script and also building my fatjar.
+Storm is pretty good for building a realtime processing engine, before getting started you need a build that creates a fatjar. This is the gradle build file for running my test Groovy script and also building my fatjar.
 
 <pre class="prettyprint Groovy">
 apply plugin: 'groovy'
