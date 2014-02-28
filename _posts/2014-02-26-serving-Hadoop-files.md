@@ -30,7 +30,8 @@ import java.net.*
 ratpack {
 	handlers {
 		get("file") {
-			def url = URLDecoder.decode(request.queryParams.url, "UTF-8").trim()
+			def url = 
+				URLDecoder.decode(request.queryParams.url, "UTF-8").trim()
 
 			if (url) {
 				def har = new HarFileSystem()
