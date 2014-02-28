@@ -30,22 +30,30 @@ import java.net.*
 ratpack {
 	handlers {
 		get("file") {
-			def url = request.queryParams.url
+			def url = URLDecoder.decode(request.queryParams.url, "UTF-8").trim()
 
 			if (url) {
-				def c = new Configuration()
-				def fs = org.apache.hadoop.fs.
-					FileSystem.get(URI.create(url), conf)
+				def har = new HarFileSystem()
+				har.initialize(URI.create(url), new Configuration())
 				def bos = new ByteArrayOutputStream()
 				def in = null
+				def ok = true
 				try {
-					in = fs.open(new Path(url))
+					in = har.open(new Path(url))
 					IOUtils.copyBytes(in, bos, 4096, false)
 	 			} 
-	 			catch (Exception ex) {}
-	 			finally { IOUtils.closeStream(in)}
-	 			response.send(bos.toByteArray())
-
+	 			catch (Exception ex) {
+	 				ok = false
+		 		} finally {
+	 				IOUtils.closeStream(in)
+	 				har.close()
+	 			}
+	 			if (ok) {
+		 			response.send(bos.toByteArray())
+		 		} else {
+		 			response.status(404)
+		 			response.send()
+			 	}
 			}
 		}
 	}	
@@ -54,3 +62,15 @@ ratpack {
 
 </pre>
 
+The code below allows you to send requests
+
+<pre class="prettyprint Java">
+
+def client = new DefaultHttpClient()
+def hget = new HttpGet(fileserver +"?url=" + URLEncoder.encode(url, "UTF-8"))
+def resp = client.execute(hget)
+if (resp.getStatusLine().getSTatusCode() == 200) {
+	println resp.getEntity().getContent()	
+}
+
+</pre>

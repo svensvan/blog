@@ -24,5 +24,5 @@ If you want to view the files in your archive run this command:
 
 <pre class="prettyprint lang-sh">
 #!/bin/sh
-hadoop fs -ls -R har:(namenode):8020/myarchive.har | grep -v ^d | grep -o har://.*
+hadoop fs -ls -R har://hdfs-(namenode domain):8020/myarchive.har | grep -v ^d | grep -o har://.*
 </pre>
