@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Extracting Text from Binary files like Pdfs, Word, Excel, etc"
+title: "Extract Text from Binary Files"
 ---
 
 Solr has a module that extracts text from binary files.  One option is just send the bytes up to Solr and have
