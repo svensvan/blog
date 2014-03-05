@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "Important SolrCloud Commands"
+title: "Getting started with Cloudera SolrCloud"
 ---
 
-Below are steps to create a new collection using solrctl, which is part of Cloudera's SolrCloud distro.
+Below are steps to create a new collection using the solrctl command, which comes with Cloudera's SolrCloud distro.
 
 <pre class="prettyprint sh">
 #Generate configuration files:
