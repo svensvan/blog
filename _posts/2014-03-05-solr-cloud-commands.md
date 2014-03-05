@@ -29,3 +29,8 @@ solrctl  --zk host1:2181,host2:2181/solr collection --create mycoll -s 2
 #View your new collection:
 solrctl  --zk host1:2181,host2:2181/solr collection --list
 </pre>
+
+<pre class="prettyprint sh">
+#Query the empty solr collection
+curl http://localhost:8983/solr/mycoll/select?q=*:*
+</pre>
