@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Getting started with Cloudera's SolrCloud"
+title: "Getting started with SolrCloud"
 ---
 
 The steps below will create a new Solr collection. 
