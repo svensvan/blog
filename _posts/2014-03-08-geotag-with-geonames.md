@@ -65,8 +65,11 @@ Below are some parts I found useful:
 	LOAD DATA LOCAL INFILE '/data/allCountries.txt' INTO TABLE geoname (geonameid,name,asciiname,alternatenames,latitude,longitude,fclass,fcode,country,cc2, admin1,admin2,admin3,admin4,population,elevation,gtopo30,timezone,moddate); 
 
 	LOAD DATA LOCAL INFILE '/data/admin1CodesAscii.txt' INTO TABLE admin1CodesAscii (code, name, nameAscii, geonameid);
-	
+
 	LOAD DATA LOCAL INFILE '/data/countryInfo-n.txt' INTO TABLE countryInfo IGNORE 1 LINES (iso_alpha2,iso_alpha3,iso_numeric,fips_code,name,capital,areaInSqKm,population,continent,languages,currency,geonameId); 
+
+	//where geoname.country = countryInfo.iso_alpha2 
+	//and admin1CodesAscii.code = concat(geoname.country, '.', 'geoname.admin1)
 
 </pre>
 
