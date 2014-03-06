@@ -8,7 +8,7 @@ in the regular Solr distribution, as well as the solr-cell* one found in SolrClo
 
 Second, you'll need to update the lib tag in solrconfig to point to the right folder.
 
-Finally, you'll need to add the following request handler to solrconfig (replace parens with brackets):
+Finally, you'll need to add the following request handler to solrconfig:
 
 <pre class="prettyprint xml">
 &lt;requestHandler name=“/update/extract” class=“org.apache.solr.handler.extraction.ExtractingRequestHandler”&gt;
@@ -18,4 +18,8 @@ Finally, you'll need to add the following request handler to solrconfig (replace
 &lt;/requestHandler&gt;
 </pre>
 
-
+To test this out create the following script 
+<pre class="prettyprint sh">
+curl "http://hostname:8983/solr/mycoll/update/extract?"  \
+"extractOnly=true(ampersand)wt=json(ampersand)indent=true(ampersand)extractFormat=text"  \
+</pre>
