@@ -11,10 +11,22 @@ Second, you'll need to update the lib tag in solrconfig to point to the right fo
 Finally, you'll need to add the following request handler to solrconfig (replace parens with brackets):
 
 <pre class="prettyprint xml">
-(requestHandler name=“/update/extract” class=“org.apache.solr.handler.extraction.ExtractingRequestHandler”)
-  (lst name=“default”)
-    (str name=“uprefix”>ignored_(/str)
-  (/lst)
-(/requestHandler)
+&lt;requestHandler name=“/update/extract” class=“org.apache.solr.handler.extraction.ExtractingRequestHandler”&gt;
+  &lt;lst name=“default”&gt;
+    &lt;str name=“uprefix”>ignored_&lt;/str&gt;
+  &lt;/lst&gt;
+&lt;/requestHandler&gt;
+</pre>
+
+To test this out create the following script 
+<pre class="prettyprint sh">
+curl "http://hostname:8983/solr/mycoll/update/extract?"  \
+"extractOnly=true(ampersand)wt=json(ampersand)indent=true(ampersand)extractFormat=text"  \
+-F "myfile=@$1"
+</pre>
+
+And the run it
+<pre class="prettyprint sh">
+./runtheabovescript.sh withsomefile.pdf
 </pre>
 
