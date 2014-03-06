@@ -18,4 +18,4 @@ Finally, you'll need to add the following request handler to solrconfig:
 &lt;/requestHandler&gt;
 </pre>
 
-
+Test the above by going to /update/extract using params extractOnly=true and extractFormat=text -F "thefile=@file"
