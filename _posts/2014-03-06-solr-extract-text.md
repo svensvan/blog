@@ -20,5 +20,4 @@ Finally, you'll need to add the following request handler to solrconfig:
 
 To test this out create the following script 
 <pre class="prettyprint sh">
-	test
 </pre>
