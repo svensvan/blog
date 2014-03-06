@@ -20,5 +20,5 @@ Finally, you'll need to add the following request handler to solrconfig:
 
 To test this out create the following script 
 <pre class="prettyprint sh">
-curl "http://hostname:8983/solr/mycoll/update/extract?extractOnly=true(ampersand)wt=json(ampersand)indent=true(ampersand)extractFormat=text"
+	test
 </pre>
