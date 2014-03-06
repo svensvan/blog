@@ -18,7 +18,4 @@ Finally, you'll need to add the following request handler to solrconfig:
 &lt;/requestHandler&gt;
 </pre>
 
-To test this out create the following script 
-<pre class="prettyprint bash">
-	def var = "";
-</pre>
+To test this out create the following scriptz
