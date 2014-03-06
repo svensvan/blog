@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Extract Text using SolrCloud"
+title: "Setting up SolrCloud to Extract Text"
 ---
 
 First, put the librariies in a folder accessible by all servers.  You will need the contrib/extraction libraries found

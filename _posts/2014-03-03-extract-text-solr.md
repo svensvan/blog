@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Extract Text from Binary Files"
+title: "Using SolrJ Client to Extract Text"
 ---
 
 Solr has a module that extracts text from binary files.  One option is just send the bytes up to Solr and have
