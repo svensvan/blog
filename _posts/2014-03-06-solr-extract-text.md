@@ -13,7 +13,7 @@ Finally, you'll need to add the following request handler to solrconfig (replace
 <pre class="prettyprint xml">
 &lt;requestHandler name=“/update/extract” class=“org.apache.solr.handler.extraction.ExtractingRequestHandler”&gt;
   &lt;lst name=“default”&gt;
-    &lt;str name=“uprefix”>ignored_&lt;/str&gt;
+    &lt;str name=“uprefix”&gt;ignored_&lt;/str&gt;
   &lt;/lst&gt;
 &lt;/requestHandler&gt;
 </pre>
