@@ -12,15 +12,4 @@ Finally, you'll need to add the following request handler to solrconfig (replace
 
 test
 
-To test this out create the following script 
-<pre class="prettyprint sh">
-curl "http://hostname:8983/solr/mycoll/update/extract?"  \
-"extractOnly=true(ampersand)wt=json(ampersand)indent=true(ampersand)extractFormat=text"  \
--F "myfile=@$1"
-</pre>
-
-And the run it
-<pre class="prettyprint sh">
-./runtheabovescript.sh withsomefile.pdf
-</pre>
 
