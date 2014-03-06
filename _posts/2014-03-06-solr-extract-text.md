@@ -18,4 +18,6 @@ Finally, you'll need to add the following request handler to solrconfig:
 &lt;/requestHandler&gt;
 </pre>
 
-To test this out create the following scriptz
+upd
+<pre class="prettyprint Java">
+</pre>
